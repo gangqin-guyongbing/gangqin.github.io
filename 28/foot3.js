@@ -1,4 +1,4 @@
-﻿window.onload = function() {
+﻿﻿window.onload = function() {
 	gg7();
 	//active();
 	document.onkeydown = function() {
@@ -280,6 +280,6 @@ function gg7() {
 			document.getElementById("gg5").innerHTML = xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET", "gg/gg5.html", true);
+	xmlhttp.open("GET", "gg5.html", true);
 	xmlhttp.send();
 }
