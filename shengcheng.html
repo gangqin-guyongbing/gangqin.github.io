@@ -1,0 +1,236 @@
+﻿<?php include '../class.php'; ?><?php include '../class.php'; ?><!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>键盘简谱制作工具-自助钢琴-<?php echo $titletop ?>-<?php echo $titletop ?></title>
+		<meta name="description" content="电脑键盘简谱生成,键盘字母钢琴简谱制作工具.">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" rev="stylesheet" href="css/2.css" type="text/css" media="all">
+		<style type="text/css">
+			h1 {
+				text-align: center;
+			}
+			
+			.kk1 li {
+				padding: 3px;
+				font-size: 20px;
+				border: 1px solid black;
+				list-style: none;
+			}
+			
+			.kk2 li {
+				padding: 3px;
+				font-size: 20px;
+				border: 1px solid black;
+				list-style: none;
+			}
+			
+			.kk1 li {
+				float: left;
+				width: 35px;
+				height: 35px;
+				background-color: red;
+			}
+			
+			.kk2 li {
+				float: left;
+				width: 35px;
+				height: 35px;
+			}
+			
+			.kk1 .red {
+				background-color: green;
+			}
+			
+			.clear {
+				clear: both;
+			}
+			button{
+				width:100px;
+				height: 60px;
+				margin-right: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				getget();
+			}
+
+			function getget() {
+				var aa = document.getElementById("gg4");
+				var c = aa.getElementsByTagName('li');
+				//========================
+				var jianpu = document.getElementById("jianpu");
+				//========================
+				var xx = document.getElementById("gg5");
+				var d = xx.getElementsByTagName('li');
+				for(var i = 0; i < d.length; i++) {
+					d[i].index = i;
+					d[i].addEventListener('click', function() {
+						var get3 = c[this.index];
+						var get4 = get3.innerHTML;
+						//alert(get4);
+						var old = jianpu.innerHTML;
+						var xin = old + get4;
+						jianpu.innerHTML = xin;
+					})
+				}
+			}
+
+			function del() {
+				var jianpu2 = document.getElementById("jianpu");
+				var jianpu = jianpu2.innerHTML;
+				//alert(jianpu.length);
+				var xuhao = jianpu.length - 1;
+				var xin = truncate(jianpu);
+				//alert(xin);
+				jianpu2.innerHTML = xin;
+			}
+
+			function fenge() {
+				var jianpu2 = document.getElementById("jianpu");
+				var jianpu = jianpu2.innerHTML;
+				var xin = jianpu + "--";
+				//alert(xin);
+				jianpu2.innerHTML = xin;
+			}
+
+			function huiche() {
+				var jianpu2 = document.getElementById("jianpu");
+				var jianpu = jianpu2.innerHTML;
+				var xin = jianpu + "\r\n";
+				//alert(xin);
+				jianpu2.innerHTML = xin;
+			}
+
+			function copy() {
+				var jianpu2 = document.getElementById("jianpu");
+				var value = jianpu2.innerHTML;
+				const text = document.createElement('textarea');
+				text.value = value;
+				document.body.appendChild(text);
+				text.select();
+				document.execCommand('Copy');
+				text.remove();
+				alert('已复制');
+			}
+
+			function truncate(arr) {
+				return arr.slice(0, -1)
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+			    <nav style="background-color:yellow ;" class="navbar navbar-default" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+						<a href="index.html" target="_blank">
+						<h2 style="color: green;font-size: 32px;margin: 0px;" class="navbar-brand">自助钢琴</h2>
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					</div>
+
+				</nav>
+				<div class="col-sm-12" style="margin-bottom: 20px;">
+				    <h1>键盘简谱制作工具</h1>
+					<label>字母简谱：</label>
+					<textarea disabled="disabled" style="width:95%;min-height: 300px;" id="jianpu"></textarea>
+					<div class="kk1" id="gg5">
+						<ul style="padding: 0px;">
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li class="red">1</li>
+							<li class="red">2</li>
+							<li class="red">3</li>
+							<li class="red">4</li>
+							<li class="red">5</li>
+							<li class="red">6</li>
+							<li class="red">7</li>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li class="red">1</li>
+							<li class="red">2</li>
+							<li class="red">3</li>
+							<li class="red">4</li>
+							<li class="red">5</li>
+							<li class="red">6</li>
+							<li class="red">7</li>
+						</ul>
+					</div>
+					<div class="kk2" id="gg4">
+						<ul style="padding: 0px;">
+							<li class="clear">A</li>
+							<li>B</li>
+							<li>C</li>
+							<li>D</li>
+							<li>E</li>
+							<li>F</li>
+							<li>G</li>
+							<li>H</li>
+							<li>I</li>
+							<li>J</li>
+							<li>K</li>
+							<li>L</li>
+							<li>M</li>
+							<li>N</li>
+							<li>O</li>
+							<li>P</li>
+							<li>Q</li>
+							<li>R</li>
+							<li>S</li>
+							<li>T</li>
+							<li>U</li>
+							<li>V</li>
+							<li>W</li>
+							<li>X</li>
+							<li>Y</li>
+							<li>Z</li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+					<hr class="hidden-sm hidden-md hidden-lg">
+					
+					<p class="clear" style="color:blue;">
+						26个英文字母，共分为4组，每组1-7分别对应：到睿米发骚拉西。
+					</p>
+				</div>
+				<div class="col-sm-12">
+				    <div>
+					<button onclick="del()">删除</button>
+					<button onclick="fenge()">分隔符</button>
+					<button onclick="huiche()">回车</button>
+					<button onclick="copy()">复制</button>
+					</div>
+					<hr class="hidden-sm hidden-md hidden-lg">
+					<div>
+					<label>制作方法：</label>
+					<p>点击数字，自动生成字母。</p>
+					<p>如有疑问，请查看<a target="_blank" href="zhuanhuan.html" style="color:blue;">简谱教程</a></p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>
