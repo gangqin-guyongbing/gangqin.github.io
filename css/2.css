@@ -52,10 +52,24 @@ img {
 	height: auto;
 	max-width: 100%;
 }
-
-@media (max-width:950px) {
+@media (min-width:450px) {
 	img{
-		max-width: 50%;
+		margin:30px;
+	}
+}
+@media (min-width:650px) {
+	img{
+		margin:25px;
+	}
+}
+@media (min-width:850px) {
+	img{
+		margin:20px;
+	}
+}
+@media (min-width:1050px) {
+	img{
+		margin:15px;
 	}
 }
 
