@@ -8,9 +8,19 @@
 	position: relative;
 	cursor:pointer;
 }
-@media (max-width:950px) {
+@media (max-width:450px) {
 	img{
-		max-width:600px;
+		max-width:280px;
+	}
+}
+@media (max-width:650px) {
+	img{
+		max-width:320px;
+	}
+}
+@media (max-width:850px) {
+	img{
+		max-width:360px;
 	}
 }
 @media (max-width:950px) {
