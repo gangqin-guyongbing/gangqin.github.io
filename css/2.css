@@ -73,7 +73,7 @@ img {
 	}
 }
 @media (max-width:1050px) {
-	.col-sm-8{
+	.col-sm-4, .col-sm-8, .col-sm-12{
 		padding:0px;
 		margin:0px;
 	}
