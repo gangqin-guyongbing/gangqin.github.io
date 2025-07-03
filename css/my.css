@@ -8,7 +8,11 @@
 	position: relative;
 	cursor:pointer;
 }
-
+@media (max-width:950px) {
+	#neirong2{
+		font-size:16px;
+	}
+}
 @media (max-width:450px) {
 	.kk2 ul {
 	padding-left: 1px;
