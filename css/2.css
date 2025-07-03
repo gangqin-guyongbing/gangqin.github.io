@@ -72,7 +72,12 @@ img {
 		margin:15px;
 	}
 }
-
+@media (max-width:1050px) {
+	.col-sm-8{
+		padding:0px;
+		margin:0px;
+	}
+}
 ul.inline li {
 	display: inline;
 	margin-left: 5px;
