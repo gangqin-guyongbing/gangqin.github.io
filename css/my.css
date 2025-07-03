@@ -8,26 +8,6 @@
 	position: relative;
 	cursor:pointer;
 }
-@media (max-width:450px) {
-	img{
-		max-width:180px;
-	}
-}
-@media (max-width:650px) {
-	img{
-		max-width:220px;
-	}
-}
-@media (max-width:850px) {
-	img{
-		max-width:260px;
-	}
-}
-@media (max-width:1050px) {
-	img{
-		max-width:300px;
-	}
-}
 @media (max-width:950px) {
 	#neirong2{
 		font-size:16px;
